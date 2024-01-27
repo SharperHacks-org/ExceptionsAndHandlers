@@ -11,7 +11,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PathMap>$(MSBuildThisFileDirectory)={SHLLC}/CoreLibs/$(MSBuildProjectName)/</PathMap>
-    <SignAssembly>False</SignAssembly>
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <ItemGroup>
