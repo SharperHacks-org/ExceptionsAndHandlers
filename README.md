@@ -18,8 +18,8 @@ Nuget: https://www.nuget.org/packages/SharperHacks.CoreLibs.ExceptionsAndHandler
 
 #### ExceptionT
 Generic exception, making it easy to throw more specific exceptions than with simple 
-Exception. Use to the "warning CA2201: Exception type System.Exception is not sufficiently 
-specific" warning.
+Exception. Use to avoid the "warning CA2201: Exception type System.Exception is not 
+sufficiently specific" warning.
 
 Example:
 ```
