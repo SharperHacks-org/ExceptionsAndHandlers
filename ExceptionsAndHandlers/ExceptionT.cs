@@ -53,4 +53,3 @@ public class Exception<T> : Exception
 // SharperHacks is a trademark of Sharper Hacks LLC (US-Wa), and may not be
 // applied to distributions of derivative works, without the express written
 // permission of a registered officer of Sharper Hacks LLC (US-WA).
-
