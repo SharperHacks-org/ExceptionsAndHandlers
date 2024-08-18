@@ -6,3 +6,4 @@
 using System.Diagnostics.CodeAnalysis;
 
 [assembly: SuppressMessage("Style", "IDE0160:Convert to block scoped namespace", Justification = "<Pending>", Scope = "namespace", Target = "~N:SharperHacks.CoreLibs.ExceptionsAndHandlers")]
+[assembly: SuppressMessage("Style", "IDE0160:Convert to block scoped namespace", Justification = "<Pending>", Scope = "namespace", Target = "~N:SharperHacks.CoreLibs.ExceptionsAndHandlers")]
