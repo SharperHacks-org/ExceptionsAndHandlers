@@ -4,8 +4,8 @@ namespace SharperHacks.CoreLibs.ExceptionsAndHandlers;
 
 /// <summary>
 /// Generic exception, making it easy to throw more specific exceptions than with simple 
-/// Exception.Use to the "warning CA2201: Exception type System.Exception is not sufficiently 
-/// specific" warning.
+/// Exception.Use to avoid the "warning CA2201: Exception type System.Exception is not 
+/// sufficiently specific" warning.
 /// </summary>
 /// <typeparam name="T"></typeparam>
 public class Exception<T> : Exception
@@ -17,21 +17,21 @@ public class Exception<T> : Exception
     public Exception(string message) : base(BuildMessage(message)) { }
 
     /// <inheritdoc cref="Exception.Exception(string, Exception)"/>
-    public Exception(string message, Exception innerException) 
+    public Exception(string message, Exception innerException)
         : base(BuildMessage(message), innerException) { }
 
     /// <summary>
-    /// Produces a string that contains the type of T full name in it.
+    /// Produces a string that contains full name of type of T.
     /// </summary>
     /// <param name="message"></param>
     /// <returns>string</returns>
     protected static string BuildMessage(string? message = null)
     {
-        var nameOfT = typeof(T).FullName 
+        var nameOfT = typeof(T).FullName
             ?? $"SharperHacks.CoreLibs.{nameof(ExceptionsAndHandlers)}.Exception<unknown>";
 
-        return message is null 
-            ? $"{nameOfT}." 
+        return message is null
+            ? $"{nameOfT}."
             : $"{nameOfT}: {message}";
     }
 }
