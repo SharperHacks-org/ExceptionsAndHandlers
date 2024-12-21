@@ -41,6 +41,7 @@
     <Nullable>enable</Nullable>
     <PathMap>$(MSBuildThisFileDirectory)={SHLLC/CoreLibs/$(MSBuildProjectName)}/</PathMap>
     <SignAssembly>False</SignAssembly>
+    <NuGetAuditMode>all</NuGetAuditMode>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0|AnyCPU'">
