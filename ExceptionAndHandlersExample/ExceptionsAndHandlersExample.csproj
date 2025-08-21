@@ -9,8 +9,12 @@
     <Deterministic>true</Deterministic>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <PathMap>$(MSBuildThisFileDirectory)={SHLLC}/CoreLibs/$(MSBuildProjectName)/</PathMap>
     <IsPackable>false</IsPackable>
+    <PathMap>$(SolutionDir)={SHLLC/CoreLibs/ExceptionsAndHandlers}/</PathMap>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(SolutionName)'=='CoreLibs'">
+    <IsCoreLibsBuild>true</IsCoreLibsBuild>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,10 +22,10 @@
   </ItemGroup>
   
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.3" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="9.0.3" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.3" />
-    <PackageReference Include="System.Text.Json" Version="9.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.8" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="9.0.8" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.8" />
+    <PackageReference Include="System.Text.Json" Version="9.0.8" />
   </ItemGroup>
 
   <ItemGroup>

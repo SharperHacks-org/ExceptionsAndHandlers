@@ -1,12 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Authors>Joseph W Donahue</Authors>
-    <Copyright>Joseph W Donahue &amp; Sharper Hacks LLC (WA)</Copyright>
-    <Company>Sharper Hacks LLC (US-WA)</Company>
-  </PropertyGroup>
-
-  <PropertyGroup>
     <Description>Defines exception handling classes and methods.</Description>
     <AssemblyName>SharperHacks.CoreLibs.$(MSBuildProjectName)</AssemblyName>
     <RootNamespace>SharperHacks.CoreLibs.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
@@ -15,6 +9,7 @@
     <AssemblyVersion>0.0.0.0</AssemblyVersion>
     <FileVersion>0.0.0.0</FileVersion>
     <Title>$(AssemblyName)</Title>
+    <PathMap>$(SolutionDir)={$(PathMapRoot)/$(SolutionName)}/</PathMap>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -39,9 +34,12 @@
     <Deterministic>true</Deterministic>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <PathMap>$(MSBuildThisFileDirectory)={SHLLC/CoreLibs/$(MSBuildProjectName)}/</PathMap>
     <SignAssembly>False</SignAssembly>
     <NuGetAuditMode>all</NuGetAuditMode>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(SolutionName)'=='CoreLibs'">
+    <IsCoreLibsBuild>true</IsCoreLibsBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0|AnyCPU'">
@@ -69,28 +67,25 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="$(SolutionDir)LICENSE" Pack="true" PackagePath="" />
-    <None Include="..\.editorconfig" Link=".editorconfig" />
-    <None Update="LICENSE">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="$(SolutionDir)README.md" Pack="true" PackagePath="">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="README.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="$(SolutionDir)*.jpg" Pack="true" PackagePath="\" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.3" />
-    <None Update="$(SolutionDir)*.jpg">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+      <None Include="$(SolutionDir)LICENSE" Pack="true" PackagePath="" />
+      <None Update="LICENSE">
+          <Pack>True</Pack>
+          <PackagePath>\</PackagePath>
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Include="$(SolutionDir)README.md" Pack="true" PackagePath="" />
+      <None Update="README.md">
+          <Pack>True</Pack>
+          <PackagePath>\</PackagePath>
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Include="$(SolutionDir)*.jpg" Pack="true" PackagePath="\" />
+      <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.8" />
+      <None Update="$(SolutionDir)*.jpg">
+          <Pack>True</Pack>
+          <PackagePath>\</PackagePath>
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
   </ItemGroup>
 
 </Project>
