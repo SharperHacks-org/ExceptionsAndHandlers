@@ -20,21 +20,21 @@ public class ExceptionTSmokeTests
     {
         var assemblyUnderTestName = $"SharperHacks.CoreLibs.{nameof(SharperHacks.CoreLibs.ExceptionsAndHandlers)}";
         var toStringResult = ex.ToString();
-        Assert.IsTrue(toStringResult.StartsWith(assemblyUnderTestName));
-        Assert.IsTrue(toStringResult.Contains(nameof(ExceptionTSmokeTests)));
+        Assert.StartsWith(assemblyUnderTestName, toStringResult);
+        Assert.Contains(nameof(ExceptionTSmokeTests), toStringResult);
 
         if (message is not null)
         {
-            Assert.IsTrue(toStringResult.Contains(message));
+            Assert.Contains(message, toStringResult);
         }
         else
         {
-            Assert.IsTrue(toStringResult.EndsWith($"{nameof(ExceptionsAndHandlersUT)}.{nameof(ExceptionTSmokeTests)}."));
+            Assert.EndsWith($"{nameof(ExceptionsAndHandlersUT)}.{nameof(ExceptionTSmokeTests)}.", toStringResult);
         }
 
         if (innerMessage is not null)
         {
-            Assert.IsTrue(toStringResult.Contains(innerMessage));
+            Assert.Contains(innerMessage, toStringResult);
         }
     }
 
@@ -67,7 +67,7 @@ public class ExceptionTSmokeTests
         Console.WriteLine(exception);
 
         Validate(exception, _testMessage);
-        Assert.IsTrue(exception.InnerException == innerException);
+        Assert.AreEqual(innerException, exception.InnerException);
     }
 }
 
