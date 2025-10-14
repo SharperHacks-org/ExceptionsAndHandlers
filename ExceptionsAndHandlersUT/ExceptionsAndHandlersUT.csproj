@@ -6,6 +6,7 @@
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
     <PathMap>$(SolutionDir)={$(PathMapRoot)/$(SolutionName)}/</PathMap>
+    <TargetFrameworks>$(Targetframeworks)</TargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(SolutionName)'=='CoreLibs'">
@@ -20,7 +21,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="SharperHacks.CoreLibs.IO" Version="7.0.3" />
+    <PackageReference Include="SharperHacks.CoreLibs.IO" Version="7.0.4" />
   </ItemGroup>
 
   <ItemGroup>

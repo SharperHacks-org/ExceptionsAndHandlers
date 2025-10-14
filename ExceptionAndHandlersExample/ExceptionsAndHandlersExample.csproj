@@ -11,6 +11,7 @@
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
     <PathMap>$(SolutionDir)={SHLLC/CoreLibs/ExceptionsAndHandlers}/</PathMap>
+    <TargetFrameworks>$(Targetframeworks)</TargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(SolutionName)'=='CoreLibs'">
