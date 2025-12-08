@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+    <Deterministic>true</Deterministic>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+    <PathMap>$(SolutionDir)={SHLLC/CoreLibs/ExceptionsAndHandlers}/</PathMap>
+    <TargetFrameworks>$(Targetframeworks)</TargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(SolutionName)'=='CoreLibs'">
+    <IsCoreLibsBuild>true</IsCoreLibsBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="SharperHacks.CoreLibs.ExceptionsAndHandlersUT" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="10.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="10.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.0" />
+    <PackageReference Include="System.Text.Json" Version="10.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ExceptionsAndHandlers\ExceptionsAndHandlers.csproj" />
+  </ItemGroup>
+
+</Project>

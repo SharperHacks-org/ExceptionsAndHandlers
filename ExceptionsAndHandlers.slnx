@@ -1,4 +1,12 @@
 <Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="Any CPU 32-bit preferred" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+    <Platform Name="ARM" />
+    <Platform Name="ARM64" />
+  </Configurations>
   <Folder Name="/Solution Items/">
     <File Path=".editorconfig" />
     <File Path=".gitignore" />
@@ -10,7 +18,7 @@
     <File Path="SHLLC-Logo.128.100.jpg" />
     <File Path="SHLLC-Logo.jpg" />
   </Folder>
-  <Project Path="ExceptionAndHandlersExample/ExceptionsAndHandlersExample.csproj" />
+  <Project Path="ExceptionsAndHandlersExample/ExceptionsAndHandlersExample.csproj" />
   <Project Path="ExceptionsAndHandlers/ExceptionsAndHandlers.csproj" />
   <Project Path="ExceptionsAndHandlersUT/ExceptionsAndHandlersUT.csproj" />
 </Solution>

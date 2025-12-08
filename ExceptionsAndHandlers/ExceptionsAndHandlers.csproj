@@ -81,7 +81,7 @@
           <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
       <None Include="$(SolutionDir)*.jpg" Pack="true" PackagePath="\" />
-      <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.9" />
+      <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.0" />
       <None Update="$(SolutionDir)*.jpg">
           <Pack>True</Pack>
           <PackagePath>\</PackagePath>

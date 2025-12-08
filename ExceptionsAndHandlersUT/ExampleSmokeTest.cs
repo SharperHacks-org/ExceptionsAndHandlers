@@ -26,26 +26,26 @@ info: Program[0]
 warn: Program[0]
       Exception handled.
       SharperHacks.CoreLibs.ExceptionsAndHandlers.Exception`1[Example.Class1]: Example.Class1.
-         at Example.Class1.Throw() in {SHLLC/CoreLibs/ExceptionsAndHandlers}/ExceptionAndHandlersExample/Class1.cs:line 9
-         at Program.<Main>$(String[] args) in {SHLLC/CoreLibs/ExceptionsAndHandlers}/ExceptionAndHandlersExample/Program.cs:line 26
+         at Example.Class1.Throw() in {SHLLC/CoreLibs/ExceptionsAndHandlers}/ExceptionsAndHandlersExample/Class1.cs:line 9
+         at Program.<Main>$(String[] args) in {SHLLC/CoreLibs/ExceptionsAndHandlers}/ExceptionsAndHandlersExample/Program.cs:line 26
 warn: Program[0]
       Exception handled.
       SharperHacks.CoreLibs.ExceptionsAndHandlers.Exception`1[Example.Class1]: Example.Class1: Message one.
-         at Example.Class1.Throw(String message) in {SHLLC/CoreLibs/ExceptionsAndHandlers}/ExceptionAndHandlersExample/Class1.cs:line 11
-         at Program.<Main>$(String[] args) in {SHLLC/CoreLibs/ExceptionsAndHandlers}/ExceptionAndHandlersExample/Program.cs:line 35
+         at Example.Class1.Throw(String message) in {SHLLC/CoreLibs/ExceptionsAndHandlers}/ExceptionsAndHandlersExample/Class1.cs:line 11
+         at Program.<Main>$(String[] args) in {SHLLC/CoreLibs/ExceptionsAndHandlers}/ExceptionsAndHandlersExample/Program.cs:line 35
 fail: Program[0]
       Exception handled
       SharperHacks.CoreLibs.ExceptionsAndHandlers.Exception`1[Example.Class1]: Example.Class1: Caught exception.
        ---> SharperHacks.CoreLibs.ExceptionsAndHandlers.Exception`1[Example.Class2]: Example.Class2: Class two exception.
-         at Example.Class2..ctor() in {SHLLC/CoreLibs/ExceptionsAndHandlers}/ExceptionAndHandlersExample/Class2.cs:line 9
-         at Example.Class1.ThrowWithClass2InnerException() in {SHLLC/CoreLibs/ExceptionsAndHandlers}/ExceptionAndHandlersExample/Class1.cs:line 17
+         at Example.Class2..ctor() in {SHLLC/CoreLibs/ExceptionsAndHandlers}/ExceptionsAndHandlersExample/Class2.cs:line 9
+         at Example.Class1.ThrowWithClass2InnerException() in {SHLLC/CoreLibs/ExceptionsAndHandlers}/ExceptionsAndHandlersExample/Class1.cs:line 17
          --- End of inner exception stack trace ---
-         at Example.Class1.ThrowWithClass2InnerException() in {SHLLC/CoreLibs/ExceptionsAndHandlers}/ExceptionAndHandlersExample/Class1.cs:line 21
-         at Program.<Main>$(String[] args) in {SHLLC/CoreLibs/ExceptionsAndHandlers}/ExceptionAndHandlersExample/Program.cs:line 44
+         at Example.Class1.ThrowWithClass2InnerException() in {SHLLC/CoreLibs/ExceptionsAndHandlers}/ExceptionsAndHandlersExample/Class1.cs:line 21
+         at Program.<Main>$(String[] args) in {SHLLC/CoreLibs/ExceptionsAndHandlers}/ExceptionsAndHandlersExample/Program.cs:line 44
 crit: Program[0]
       Fatal error: Unhandled exception caught.
       SharperHacks.CoreLibs.ExceptionsAndHandlers.Exception`1[Program]: Program: This exception is unhandled.
-         at Program.<Main>$(String[] args) in {SHLLC/CoreLibs/ExceptionsAndHandlers}/ExceptionAndHandlersExample/Program.cs:line 51
+         at Program.<Main>$(String[] args) in {SHLLC/CoreLibs/ExceptionsAndHandlers}/ExceptionsAndHandlersExample/Program.cs:line 51
 info: Program[0]
       ExceptionEventHandler successfully unregistered.";
 
