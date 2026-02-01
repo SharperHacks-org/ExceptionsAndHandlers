@@ -1,4 +1,5 @@
-![SharperHacks logo](SHLLC-Logo.jpg)
+![SharperHacks logo](https://raw.githubusercontent.com/SharperHacks-org/Assets/main/Images/SHLLC-Logo.png)
+
 # ExceptionsAndHandlers Library for .NET
 ## SharperHacks.CoreLibs.ExceptionsAndHandlers
 

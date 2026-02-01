@@ -18,7 +18,7 @@
     <EnableNETAnalyzers>True</EnableNETAnalyzers>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <IncludeSymbols>True</IncludeSymbols>
-    <PackageIcon>SHLLC-Logo.128.100.jpg</PackageIcon>
+    <PackageIcon>SHLLC-Logo.128.100.png</PackageIcon>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/SharperHacks-org/$(MSBuildProjectName)</PackageProjectUrl>
     <PackageReadMeFile>README.md</PackageReadMeFile>
@@ -80,9 +80,9 @@
           <PackagePath>\</PackagePath>
           <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
-      <None Include="$(SolutionDir)*.jpg" Pack="true" PackagePath="\" />
+      <None Include="$(SolutionDir)*.png" Pack="true" PackagePath="\" />
       <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.1" />
-      <None Update="$(SolutionDir)*.jpg">
+      <None Update="$(SolutionDir)*.png">
           <Pack>True</Pack>
           <PackagePath>\</PackagePath>
           <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
